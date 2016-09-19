@@ -1,7 +1,7 @@
 apply plugin: 'com.android.library'
 
 ext {
-    bintrayRepo = 'Commons'
+    bintrayRepo = 'Rest'
     bintrayName = 'commons'
     publishedGroupId = 'in.gauriinfotech'
     libraryName = 'Commons'
