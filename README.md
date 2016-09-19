@@ -8,7 +8,7 @@ HOW TO USE GUID.
             compile 'in.gauriinfotech:commons:1.0.0'
       }
 
-2) Upload File using below code.
+2) Get file path from below code.
 --------------
 
         String path = in.gauriinfotech.commons.Commons.getPath(uri, context);
