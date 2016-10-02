@@ -5,7 +5,7 @@ HOW TO USE GUID.
 --------------
       dependencies {
             ....
-            compile 'in.gauriinfotech:commons:1.0.1'
+            compile 'in.gauriinfotech:commons:1.0.2'
       }
 
 2) Get file path from below code.
@@ -28,5 +28,18 @@ NOTE : Be sure your app has READ_EXTERNAL_STORAGE permissions declared in manife
                     }
                 }).display();
 
+4) Display toast using below code
+---------------
 
-If you have any doubts contact on nirranjan.raut@gmail.com
+        Commons.toast(YourActivity.this, "This is test toast message.");
+
+
+5) Check if your has active internet connection using below code.
+---------------
+
+        if(Commons.isOnline(this)) { // Context
+            // your logic here
+        }
+
+
+If you have any doubts or required any common task to be added in this, contact me on nirranjan.raut@gmail.com
