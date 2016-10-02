@@ -56,7 +56,7 @@ public class CustomProgress extends ProgressDialog {
 
     public static void close() {
         if(instance != null && instance.isShowing()) {
-            instance.display();
+            instance.dismiss();
         }
     }
 
