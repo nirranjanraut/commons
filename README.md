@@ -34,7 +34,7 @@ NOTE : Be sure your app has READ_EXTERNAL_STORAGE permissions declared in manife
         Commons.toast(YourActivity.this, "This is test toast message.");
 
 
-5) Check if your has active internet connection using below code.
+5) Check if device has active internet connection using below code.
 ---------------
 
         if(Commons.isOnline(this)) { // Context
