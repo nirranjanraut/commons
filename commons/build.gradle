@@ -9,7 +9,7 @@ ext {
     libraryDescription = 'Common tasks added in this library.'
     siteUrl = 'https://github.com/nirranjanraut/commons'
     gitUrl = 'https://github.com/nirranjanraut/commons.git'
-    libraryVersion = '1.0.2'
+    libraryVersion = '1.0.3'
     developerId = 'nirranjanraut'
     developerName = 'Niranjan Raut'
     developerEmail = 'nirranjan.raut@gmail.com'
