@@ -20,7 +20,7 @@ NOTE : Be sure your app has READ_EXTERNAL_STORAGE permissions declared in manife
 
         CustomProgress.from(this) // Context
                 .title("Please wait") // title
-                .message("Saving address.") // message
+                .message("Connecting to server.") // message
                 .onCancel(new DialogInterface.OnCancelListener() {
                     @Override
                     public void onCancel(DialogInterface dialogInterface) {
