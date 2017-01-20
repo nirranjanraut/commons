@@ -5,7 +5,7 @@ HOW TO USE GUID.
 --------------
       dependencies {
             ....
-            compile 'in.gauriinfotech:commons:1.0.2'
+            compile 'in.gauriinfotech:commons:1.0.8’
       }
 
 2) Get file path from below code.
@@ -15,10 +15,10 @@ HOW TO USE GUID.
 
 NOTE : Be sure your app has READ_EXTERNAL_STORAGE permissions declared in manifest.
 
-3) Use CustomProgress using below code.
+3) Use Progress using below code.
 --------------
 
-        CustomProgress.from(this) // Context
+        in.gauriinfotech.commons.Progress.from(this) // Context
                 .title("Please wait") // title
                 .message("Connecting to server.") // message
                 .onCancel(new DialogInterface.OnCancelListener() {
@@ -31,15 +31,21 @@ NOTE : Be sure your app has READ_EXTERNAL_STORAGE permissions declared in manife
 4) Display toast using below code
 ---------------
 
-        Commons.toast(YourActivity.this, "This is test toast message.");
+        in.gauriinfotech.commons.Commons.toast(YourActivity.this, "This is test toast message.");
 
 
 5) Check if device has active internet connection using below code.
 ---------------
 
-        if(Commons.isOnline(this)) { // Context
+        if(in.gauriinfotech.commons.Commons.isOnline(this)) { // Context
             // your logic here
         }
+
+
+
+
+
+
 
 
 If you have any doubts or required any common task to be added in this, contact me on nirranjan.raut@gmail.com

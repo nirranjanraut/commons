@@ -24,9 +24,13 @@ import android.widget.Toast;
 public class Commons {
 
     private static final String tag = "Commons";
+    private static Toast toast;
 
     public static void toast(Context context, String message) {
-        Toast toast = Toast.makeText(context, message, Toast.LENGTH_SHORT);
+        if(toast != null) {
+            toast.cancel();
+        }
+        toast = Toast.makeText(context, message, Toast.LENGTH_SHORT);
         toast.show();
     }
 

@@ -27,6 +27,7 @@ public class CustomRequest extends Request<String> {
     private Map<String, String> params;
     private Response.Listener<String> listener;
     private Map<String, String> headers;
+    private boolean debug = false;
 
     private CustomRequest(String url, int method, Map<String, String> params,
                           Response.Listener<String> responseListener, Response.ErrorListener errorListener) {
@@ -69,12 +70,18 @@ public class CustomRequest extends Request<String> {
         return new CustomRequest(url, method, params, headers, responseListener, errorListener);
     }
 
+    public void setDebugging(boolean isDebugOn) {
+        this.debug = isDebugOn;
+    }
+
     @Override
     protected Response<String> parseNetworkResponse(NetworkResponse response) {
         try {
             String jsonString = new String(response.data,
                     HttpHeaderParser.parseCharset(response.headers));
-            Log.e(tag, "RESPONSE :: " + jsonString);
+            if(debug) {
+                Log.e(tag, "Response : " + jsonString);
+            }
             return Response.success(jsonString,
                     HttpHeaderParser.parseCacheHeaders(response));
         } catch (UnsupportedEncodingException e) {
