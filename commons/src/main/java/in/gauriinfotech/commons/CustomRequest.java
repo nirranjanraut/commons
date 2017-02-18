@@ -39,7 +39,7 @@ public class CustomRequest extends Request<String> {
     public static CustomRequest getInstance(String url, int method, Map<String, String> params,
                                             Response.Listener<String> responseListener, Response.ErrorListener errorListener,
                                             String querySep, String keyValueSep, String paramSep) {
-        if(method == Method.GET && params != null) {
+        if(params != null && (method == Method.GET || method == Method.PUT || method == Method.DELETE)) {
             url += getQueryUrl(params, querySep, keyValueSep, paramSep);
         }
         return new CustomRequest(url, method, params, responseListener, errorListener);
@@ -56,7 +56,7 @@ public class CustomRequest extends Request<String> {
     public static CustomRequest getInstance(String url, int method, Map<String, String> params, Map<String, String> headers,
                                             Response.Listener<String> responseListener, Response.ErrorListener errorListener,
                                             String querySep, String keyValueSep, String paramSep) {
-        if(method == Method.GET && params != null) {
+        if(params != null && (method == Method.GET || method == Method.PUT || method == Method.DELETE)) {
             url += getQueryUrl(params, querySep, keyValueSep, paramSep);
         }
         return new CustomRequest(url, method, params, headers, responseListener, errorListener);
@@ -64,7 +64,7 @@ public class CustomRequest extends Request<String> {
 
     public static CustomRequest getInstance(String url, int method, Map<String, String> params, Map<String, String> headers,
                                             Response.Listener<String> responseListener, Response.ErrorListener errorListener) {
-        if(method == Method.GET && params != null) {
+        if(params != null && (method == Method.GET || method == Method.PUT || method == Method.DELETE)) {
             url += getQueryUrl(params, "/", "=", "&");
         }
         return new CustomRequest(url, method, params, headers, responseListener, errorListener);
